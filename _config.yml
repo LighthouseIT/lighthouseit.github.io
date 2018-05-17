@@ -1,0 +1,21 @@
+title: Lighthouse Developers
+email: donald.silveira@lighthouseit.com.br
+description: Improve your React Native apps with the powerful Lighthouse's toolkit
+tracking_id: UA-XXXXXX-X
+repository: LighthouseIT/lighthouseit.github.io
+
+# Sass settings
+sass:
+  style: compressed
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-redirect-from
+
+# Kramdown settings
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+
+url: "https://lighthouseit.github.io"

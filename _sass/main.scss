@@ -1,0 +1,234 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  background-color: transparent;
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $primary;
+  padding-top: $navbarHeight;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+/**
+ * Container
+ */
+.container-fluid {
+  width: 100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin: 0;
+}
+
+/**
+ * Navbar
+ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $navbarHeight;
+  padding: 0 16px;
+  border-bottom: 1px solid $borderColor;
+  background-color: $navbarBgColor;
+  z-index: 10;
+
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .navbar-right__search {
+    display: flex;
+    align-items: center;
+
+    > button {
+      cursor: pointer;
+      border: 0;
+      background-color: transparent;
+    }
+  }
+
+  .navbar-right__list {
+    display: inline-flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      margin: 0 4px;
+    }
+  }
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/**
+ * Language dropdown
+ */
+.lang-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+
+  .lang-dropdown__button {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &:hover {
+    .lang-dropdown__menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .lang-dropdown__menu {
+    position: absolute;
+    width: 150px;
+    top: 85%;
+    right: 0;
+    padding: 4px 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s ease-in-out;
+    
+    > a {
+      margin: 0;
+      padding: 8px 16px;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.05);
+      }
+    }
+  }
+}
+
+/**
+ * Footer
+ */
+footer {
+  height: $footerHeight;
+  background-color: $footerBgColor;
+}
+
+/**
+ * Markdown
+ */
+.markdown {
+  h1 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-weight: 400;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  h4 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: $secondary;
+  }
+
+  p {
+    margin-bottom: 1em;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba($primary, 0.8);
+  }
+
+  ul {
+    margin-left: 40px;
+
+    > li {
+      font-size: 17px;
+      color: rgba($primary, 0.8);
+
+      a {
+        color: $secondary;
+      }
+    }
+  }
+
+  code {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: $codeBgColor;
+    padding: 2px;
+    border-radius: 2px;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $primary;
+    text-shadow: none;
+    line-height: 24px;
+    margin-bottom: 1em;
+  }
+
+  code.language-shellsession {
+    display: block;
+    color: rgba($primary, 0.7);
+
+    .dollar-sign {
+      color: rgba($primary, 0.7) !important;
+    }
+
+    &::first-line {
+      color: $primary;
+    }
+  }
+
+  pre[class*="language-"] {
+    background-color: $codeBgColor;
+    border-radius: 2px;
+  }
+
+  blockquote {
+    margin-top: 1.5em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-left: 1px solid #e3e3e3;
+
+    > p {
+      margin-bottom: 0;
+    }
+  }
+}

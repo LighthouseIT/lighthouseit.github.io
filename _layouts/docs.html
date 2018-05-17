@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/prism.css">
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/docs.css">
+</head>
+
+<body class="docs">
+  {% include navbar.html %}
+
+  <sidebar>
+    {% include sidebar-nav.html %}
+  </sidebar>
+
+  <main>
+    <div class="container-fluid main-content markdown">
+      {{ content }}
+    </div>
+  </main>
+
+  <script src="{{ site.url }}/js/prism.js" data-manual></script>
+  <script src="{{ site.url }}/js/docs.js"></script>
+</body>
+</html>

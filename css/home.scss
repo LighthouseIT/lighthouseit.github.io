@@ -1,0 +1,28 @@
+---
+---
+
+@import "colors.scss";
+@import "variables.scss";
+
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.brand-center {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  margin-left: calc(-150px / 2);
+  margin-top: calc(-207px / 2);
+  width: 150px;
+}
+
+.background {
+  position: absolute;
+  top: -25vh;
+  width: 100vw;
+  height: 120vh;
+  border: 0;
+  z-index: -1;
+}

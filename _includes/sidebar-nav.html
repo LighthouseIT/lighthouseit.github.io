@@ -1,0 +1,31 @@
+<div class="sidebar-nav">
+  <h2>Documentation</h2>
+
+  <ul class="sidebar-nav__list">
+    <li class="{% if .page.url contains '/docs/introduction' %}active{% endif %}">
+      <a href="{{ site.baseurl }}/docs/introduction">Introduction</a>
+    </li>
+    <li class="{% if .page.url contains '/docs/components' %}active{% endif %}">
+      <a href="{{ site.baseurl }}/docs/components/typography">Components</a>
+      <ul>
+        <li class="{% if .page.url == '/docs/components/typography' %}active{% endif %}">
+          <a href="{{ site.baseurl }}/docs/components/typography">Typography</a>
+        </li>
+      </ul>
+    </li>
+    <li class="{% if .page.url contains '/docs/style-guide' %}active{% endif %}">
+      <a href="{{ site.baseurl }}/docs/style-guide">Style Guide</a>
+    </li>
+    <li class="{% if .page.url contains '/docs/theme' %}active{% endif %}">
+      <a href="{{ site.baseurl }}/docs/theme">Theme</a>
+    </li>
+    <li class="{% if .page.url contains '/docs/layouts' %}active{% endif %}">
+      <a href="{{ site.baseurl }}/docs/layouts/products">Layouts</a>
+      <ul>
+        <li class="{% if .page.url contains '/docs/layouts/products' %}active{% endif %}">
+          <a href="{{ site.baseurl }}/docs/layouts/products">Products</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
