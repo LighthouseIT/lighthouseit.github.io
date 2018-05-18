@@ -116,9 +116,15 @@ a {
     transition: all .15s ease-in-out;
     
     > a {
+      display: flex;
+      color: $primary;
       margin: 0;
       padding: 8px 16px;
       transition: all .15s ease-in-out;
+
+      &.active {
+        color: $secondary;
+      }
 
       &:hover {
         background-color: rgba(0,0,0,0.05);

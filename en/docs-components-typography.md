@@ -1,7 +1,8 @@
 ---
+lang: en
 layout: docs
-permalink: /docs/components/typography
-redirect_from: /docs/components
+permalink: /en/docs/components/typography
+redirect_from: /en/docs/components
 title: Typography
 section: Documentation
 ---

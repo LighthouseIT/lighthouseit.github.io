@@ -1,31 +1,38 @@
+{% assign baseNavUrl = site.url | append: '/' | append: page.lang %}
+{% assign translations = site.data.translations[page.lang] %}
+
 <div class="sidebar-nav">
   <h2>Documentation</h2>
 
   <ul class="sidebar-nav__list">
     <li class="{% if .page.url contains '/docs/introduction' %}active{% endif %}">
-      <a href="{{ site.baseurl }}/docs/introduction">Introduction</a>
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/introduction">{{ translations.introduction }}</a>
     </li>
     <li class="{% if .page.url contains '/docs/components' %}active{% endif %}">
-      <a href="{{ site.baseurl }}/docs/components/typography">Components</a>
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/components/typography">{{ translations.components }}</a>
       <ul>
-        <li class="{% if .page.url == '/docs/components/typography' %}active{% endif %}">
-          <a href="{{ site.baseurl }}/docs/components/typography">Typography</a>
+        <li class="{% if .page.url contains '/docs/components/typography' %}active{% endif %}">
+          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/components/typography">{{ translations.typography }}</a>
         </li>
       </ul>
     </li>
-    <li class="{% if .page.url contains '/docs/style-guide' %}active{% endif %}">
-      <a href="{{ site.baseurl }}/docs/style-guide">Style Guide</a>
-    </li>
-    <li class="{% if .page.url contains '/docs/theme' %}active{% endif %}">
-      <a href="{{ site.baseurl }}/docs/theme">Theme</a>
+    <li class="{% if .page.url contains '/docs/design' %}active{% endif %}">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/design">
+        {{ translations.design }}
+      </a>
     </li>
     <li class="{% if .page.url contains '/docs/layouts' %}active{% endif %}">
-      <a href="{{ site.baseurl }}/docs/layouts/products">Layouts</a>
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/layouts/products-grid">{{ translations.layouts }}</a>
       <ul>
-        <li class="{% if .page.url contains '/docs/layouts/products' %}active{% endif %}">
-          <a href="{{ site.baseurl }}/docs/layouts/products">Products</a>
+        <li class="{% if .page.url contains '/docs/layouts/products-grid' %}active{% endif %}">
+          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/layouts/products-grid">{{ translations.productsGrid }}</a>
         </li>
       </ul>
+    </li>
+    <li class="{% if .page.url contains '/docs/utility' %}active{% endif %}">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/utility">
+        {{ translations.utility }}
+      </a>
     </li>
   </ul>
 </div>

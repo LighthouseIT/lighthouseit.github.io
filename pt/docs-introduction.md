@@ -1,10 +1,10 @@
 ---
+lang: pt
 layout: docs
-permalink: /:language/docs/introduction
-redirect_from: /:language/docs/
+permalink: /pt/docs/introduction
+redirect_from: /pt/docs
 title: Introdução
 section: Documentação
-language: pt
 ---
 
 # Introdução

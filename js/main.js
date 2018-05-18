@@ -2,18 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   setLanguage();
 
   function setLanguage () {
-    var languageRegex = /^([^-]+)/ig;
-    var languagesJson = document.getElementById('site-languages-json').innerHTML;
-    var languages = JSON.parse(languagesJson || "{}");
-    var navlang = navigator.language || navigator.userLanguage;
+    var regex = /^([^-]+)/ig;
+    var navigatorLang = navigator.language || navigator.userLanguage;
+    var lang = regex.exec(navigatorLang);
+    var locationString = window.location.toString();
 
-    if ((match = languageRegex.exec(navlang))) {
-      var language = match[1];
-
-      if (languages.hasOwnProperty(language)) {
-        var path = languages[language];
-        window.location.replace(path);
-      }
+    if (['pt', 'en'].indexOf(locationString) === -1) {
+      window.location.href = locationString + '/' + lang[0];
     }
   }
 });

@@ -1,7 +1,8 @@
 ---
+lang: en
 layout: docs
-permalink: /docs/introduction
-redirect_from: /docs/
+permalink: /en/docs/introduction
+redirect_from: /en/docs/
 title: Introduction
 section: Documentation
 ---

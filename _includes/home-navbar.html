@@ -1,14 +1,16 @@
+{% assign baseUrl = site.baseurl | append: '/' | append: page.lang %}
 <nav class="navbar navbar-fixed-top navbar-home">
   <div class="navbar-left">
-    <a href="{{ site.baseUrl }}/" class="brand">Lighthouse Developers</a>
+    <a href="{{ baseUrl }}" class="brand">Lighthouse Developers</a>
   </div>
   <div class="navbar-right">
     <div class="navbar-right__list">
-      <a href="{{ site.baseurl }}/docs/introduction">Documentation</a>
+      <a href="{{ baseUrl }}/docs/introduction">Documentation</a>
       <a href="https://github.com/LighthouseIT" target="_blank">
         <img src="{{ site.baseurl }}/img/icons/github.png" width="24" height="24" alt="Github" />
       </a>
     </div>
+    {% include lang-dropdown.html %}
     <div class="navbar-right__toggle"></div>
   </div>
 </nav>
