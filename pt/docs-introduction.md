@@ -7,38 +7,37 @@ title: Introdução
 section: Documentação
 ---
 
+{% assign translations = site.data.translations[page.lang] %}
+
 # Introdução
 
-Lighthouse is a Brazilian company that focuses on creating applications for consumers and businesses using React Native. Our philosophy is that every app we create be unique and looks like it was handcrafted.
+Enquanto a [Lighthouse](http://lighthouseit.com.br) continua a crescer, percebemos a necessidade criar ferramentas para acompanhar esse crescimento e também melhorar nossos produtos e serviços. Com isso, acabamos encarando o desafio de aumentar a velocidade de desenvolvimento e em paralelo aumentar a qualidade de nossos aplicativos.
 
-Our team of developers work daily to make the construction of apps simple and at the same time not restricted in terms of design and functionality.
+> A [Lighthouse](http://lighthouseit.com.br) é uma startup focada na criação de produtos e serviços para aplicativos móveis desenvolvidos em React Native. Nosso objetivo é que cada app que criamos seja único e passe a impressão de ter sido "feito a mão" 💅
 
-That's why we have decided to created a powerful toolkit for React Native that contains a fully customizable components library, an app generator to manage your project easily, etc. It's and much more was created to make the day-to-day of our developers more productive without losing the magic of creating amazing apps.
+Nosso time de desenvolvedores vem trabalhando constantemente para tornar a construção de apps feito em React Native ainda mais simples e rápido e ao mesmo tempo sem restringir os mesmos de terem designs e funcionalidades únicas.
 
-Stay with us and know all the advantages that our toolkit can offer for you and your apps.
+Por conta desse objetivo decidimos criar um poderoso **Toolkit para React Native** que torne esses objetivos possíveis.
 
-## Welcome to the Lighthouse Ignite Boilerplate
+Veja abaixo o que nosso toolkit tem a oferecer:
+- [Lighthouse Ignite Boilerplate](#conheça-o-lighthouse-ignite-boilerplate) - Um gerador que possibilida iniciar o desenvolvimento de apps React Native em tempo recorde!
+- [UI {{ translations.components }}]({{site.url}}/{{page.lang}}/docs/components) - Uma completa biblioteca de componentes 100% customizaveis.
+- [Templates]({{site.url}}/{{page.lang}}/docs/templates) - Diversos templates que incluem Lista de Produtos, Galeria de Images, Carrinho de Compras, etc.
+- [{{ translations.theme }}]({{site.url}}/{{page.lang}}/docs/theme) - Customize rapidamente seus aplicativos de maneira rápida e eficiente.
+- [{{ translations.utility }}]({{site.url}}/{{page.lang}}/docs/utilities) - Uma biblioteca com diversos utilitários para ajudar durante o desenvolvimento.
 
-To make the setup of your development environment more efficiently, we created a **boilerplate** to help you to start the development of your apps in few minutes.
+## Conheça o Lighthouse Ignite Boilerplate
 
-One of our philosophies is to not "reinventing the wheel" if it's not necessary. Following this, we decided to not create our own CLI and instead use the [Ignite CLI](https://github.com/infinitered/ignite) and just create our own **Ignite Boilerplate** with plugins and generators.
+Para tornar o inicio do desenvolvimento mais eficiente, nós criamos o **Lighthouse Boilerplate**. Se trata de um gerador que utiliza a podera [Ignite CLI](https://github.com/infinitered/ignite) que permite a você gerar a estrutura do seu aplicativo em poucos minutos e ainda conta com diversos recursos que auxiliam durante o desenvolvimento.
 
-> **Note**
->
->By default we use the [Expo SDK](https://expo.io/) to build our boilerplate apps, but if you don't want to use the Expo SDK just keep reading the next tutorials.
+[Veja todos os recursos disponíveis para você.]({{site.url}}/{{page.lang}}/docs/lighthouse-boilerplate)
 
-## Components and Theming
-...
+## Começando com seu primeiro App
 
-## Layouts
-...
+Legal! Vamos começar criando seu primeiro app usando nosso boilerplate.
+Mas antes, existem alguns prerrequisitos a serem instalados antes de continuarmos.
 
-## Starting with your First App
-
-Cool! Let's starting to create your first app using our boilerplate.
-But first, you'll need to install some **prerequisites** before continuing with the tutorial.
-
-#### Prerequisites
+#### Prerrequisitos
 
 - [Nodejs and npm](https://nodejs.com)
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -47,16 +46,19 @@ But first, you'll need to install some **prerequisites** before continuing with 
 - ignite-cli - `$ npm install -g ignite-cli`
 - [yarn](https://yarnpkg.com/en/docs/getting-started) - `$ npm install -g yarn`
 
-> **Note**
+> **Nota**
 >
-> If your're using a MacOS maybe you will need to run the commands above using `sudo`. e.g. `sudo npm install -g npm`.
+> Se você está em um MacOS talvez precise executar os comandos acima usando `sudo`. Ex.: `sudo npm install -g npm`.
+> Tente primeiramente sem usar o `sudo`.
+
+#### Gerando seu App com Ignite CLI + Lighthouse Boilerplate
+
+Em seu terminal, execute o comando `ignite new MyFirstApp --b lighthouse-boilerplate` onde `MyFirstApp` é o nome do seu aplicativo.
+
+> **Nota**
 >
-> Try run without `sudo` first.
-
-#### Generating a New App
-
-Start by using `ignite new MyAppName --b lighthouse-boilerplate` command to generate your app.
-You'll be asked for some question, just answer according your preferences.
+> Por padrão, nós usamos o [Expo SDK](https://expo.io/) para construir nossos apps.
+> Caso você não deseje usar o Expo SDK, execute o comando acima usando a flag `--skip-expo`. Ex.: `ignite new MyFirstApp --b lighthouse-boilerplate --skip-expo`.
 
 ```ShellSession
 $ ignite new MyFirstApp -b lighthouse-boilerplate

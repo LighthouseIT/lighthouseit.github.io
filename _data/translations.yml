@@ -1,17 +1,17 @@
 en:
+  documentation: Documentation
   introduction: Introduction
   components: Components
-  design: Design
-  layouts: Layouts
+  theme: Theme
+  templates: Templates
   utility: Utility
   typography: Typography
-  productsGrid: Products Grid
 
 pt:
-  introduction: Introduction
-  components: Components
-  design: Design
-  layouts: Layouts
+  documentation: Documentação
+  introduction: Introdução
+  components: Componentes
+  theme: Temas
+  templates: Templates
   utility: Utility
   typography: Typography
-  productsGrid: Products Grid

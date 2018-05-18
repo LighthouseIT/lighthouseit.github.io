@@ -1,36 +1,43 @@
-{% assign baseNavUrl = site.url | append: '/' | append: page.lang %}
+{% assign baseDocsNavUrl = site.url | append: '/' | append: page.lang | append: '/docs' %}
 {% assign translations = site.data.translations[page.lang] %}
 
 <div class="sidebar-nav">
-  <h2>Documentation</h2>
+  <h2>{{ translations.documentation }}</h2>
 
   <ul class="sidebar-nav__list">
     <li class="{% if .page.url contains '/docs/introduction' %}active{% endif %}">
-      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/introduction">{{ translations.introduction }}</a>
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/introduction">{{ translations.introduction }}</a>
+    </li>
+    <li class="{% if .page.url == '/docs/lighthouse-boilerplate' %}active{% endif %}">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/lighthouse-boilerplate">Lighthouse Boilerplate</a>
     </li>
     <li class="{% if .page.url contains '/docs/components' %}active{% endif %}">
-      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/components/typography">{{ translations.components }}</a>
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/introduction">{{ translations.components }}</a>
       <ul>
-        <li class="{% if .page.url contains '/docs/components/typography' %}active{% endif %}">
-          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/components/typography">{{ translations.typography }}</a>
+        <li class="{% if .page.url contains '/docs/components/introduction' %}active{% endif %}">
+          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/introduction">{{ translations.introduction }}</a>
         </li>
       </ul>
     </li>
-    <li class="{% if .page.url contains '/docs/design' %}active{% endif %}">
-      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/design">
-        {{ translations.design }}
+    <li class="{% if .page.url contains '/docs/templates' %}active{% endif %}">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/templates/introduction">
+        {{ translations.templates }}
+      </a>
+      <ul>
+        <li class="{% if .page.url contains '/docs/templates/introduction' %}active{% endif %}">
+          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/templates/introduction">
+            {{ translations.introduction }}
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="{% if .page.url contains '/docs/theme' %}active{% endif %}">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/theme">
+        {{ translations.theme }}
       </a>
     </li>
-    <li class="{% if .page.url contains '/docs/layouts' %}active{% endif %}">
-      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/layouts/products-grid">{{ translations.layouts }}</a>
-      <ul>
-        <li class="{% if .page.url contains '/docs/layouts/products-grid' %}active{% endif %}">
-          <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/layouts/products-grid">{{ translations.productsGrid }}</a>
-        </li>
-      </ul>
-    </li>
     <li class="{% if .page.url contains '/docs/utility' %}active{% endif %}">
-      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseNavUrl }}/docs/utility">
+      <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/utility">
         {{ translations.utility }}
       </a>
     </li>

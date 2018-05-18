@@ -2,10 +2,10 @@
 lang: pt
 layout: docs
 permalink: /pt/docs/utility
-title: Utility
-section: Documentation
+title: Utilitários
+section: Documentação
 ---
 
-# Utility
+# Utilitários
 
-Utility documentation
+Utilitários documentation
