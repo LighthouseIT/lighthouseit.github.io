@@ -3,10 +3,10 @@ lang: pt
 layout: docs
 permalink: /pt/docs/components/introduction
 redirect_from: /pt/docs/components
-title: Components
-section: Utilitários
+title: Introdução aos Componentes
+section: Components
 ---
 
-# Components
+# Introdução aos Componentes
 
-Components documentation
+

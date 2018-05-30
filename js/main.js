@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var lang = regex.exec(navigatorLang);
     var locationString = window.location.toString();
 
-    if (['pt', 'en'].indexOf(locationString) === -1) {
-      window.location.href = locationString + '/' + lang[0];
+    if (locationString.indexOf('pt') === -1 && locationString.indexOf('en') === -1) {
+      lang = lang[0] === 'pt' || lang[0] === 'en' ? lang[0] : 'pt';
+      window.location.href = `${window.location}/${lang}`;
     }
   }
 });

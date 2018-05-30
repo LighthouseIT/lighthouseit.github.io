@@ -28,7 +28,7 @@ Veja abaixo o que nosso toolkit tem a oferecer:
 
 ## Conheça o Lighthouse Ignite Boilerplate
 
-Para tornar o inicio do desenvolvimento mais eficiente, nós criamos o **Lighthouse Boilerplate**. Se trata de um gerador que utiliza a podera [Ignite CLI](https://github.com/infinitered/ignite) que permite a você gerar a estrutura do seu aplicativo em poucos minutos e ainda conta com diversos recursos que auxiliam durante o desenvolvimento.
+Para tornar o inicio do desenvolvimento mais eficiente, nós criamos o **Lighthouse Boilerplate**. Se trata de um gerador que utiliza a poderosa [Ignite CLI](https://github.com/infinitered/ignite) que permite a você gerar a estrutura do seu aplicativo em poucos minutos e ainda conta com diversos recursos que auxiliam durante o desenvolvimento.
 
 [Veja todos os recursos disponíveis para você.]({{site.url}}/{{page.lang}}/docs/lighthouse-boilerplate)
 
