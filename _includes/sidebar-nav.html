@@ -1,10 +1,79 @@
 {% assign baseDocsNavUrl = site.url | append: '/' | append: page.lang | append: '/docs' %}
 {% assign translations = site.data.translations[page.lang] %}
 
-<div class="sidebar-nav">
-  <h2>{{ translations.documentation }}</h2>
+<ul class="lh-menu">
+  <li class="lh-menu-item">
+    <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/introduction">{{ translations.introduction }}</a>
+  </li>
+  <li class="lh-menu-item">
+    <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/lighthouse-boilerplate">Lighthouse Boilerplate</a>
+  </li>
+  <li class="lh-menu-item" disabled>
+    <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/theme">
+      {{ translations.theme }}
+      <span class="coming-badge">coming</span>
+    </a>
+  </li>
 
-  <ul class="sidebar-nav__list">
+  <li class="lh-menu-submenu">
+    <div class="lh-menu-submenu-title">{{ translations.components }}</div>
+
+    <ul class="lh-menu-submenu-sub">
+      <li class="lh-menu-item">
+        <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/introduction">
+          {{ translations.introduction }}
+        </a>
+      </li>
+
+      <li class="lh-menu-item-group">
+        <div class="lh-menu-item-group-title">Navigation</div>
+
+        <ul class="lh-menu-item-group-list">
+          <li class="lh-menu-item" disabled>
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/navigation-header">
+              NavigationHeader
+              <span class="coming-badge">coming</span>
+            </a>
+          </li>
+          <li class="lh-menu-item" disabled>
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/navigation-drawer">
+              NavigationDrawer
+              <span class="coming-badge">coming</span>
+            </a>
+          </li>
+          <li class="lh-menu-item" disabled>
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/navigation-tabs">
+              NavigationTabs
+              <span class="coming-badge">coming</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="lh-menu-item-group">
+        <div class="lh-menu-item-group-title">Data Display</div>
+
+        <ul class="lh-menu-item-group-list">
+          <li class="lh-menu-item">
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/accordion">
+              Accordion
+            </a>
+          </li>
+          <li class="lh-menu-item">
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/badge">
+              Badge
+            </a>
+          </li>
+          <li class="lh-menu-item">
+            <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/components/typography">
+              Typography
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <!-- <ul class="sidebar-nav__list">
     <li class="{% if .page.url contains '/docs/introduction' %}active{% endif %}">
       <a rel="alternate" hreflang="{{ page.lang }}" href="{{ baseDocsNavUrl }}/introduction">{{ translations.introduction }}</a>
     </li>
@@ -41,5 +110,5 @@
         {{ translations.utility }}
       </a>
     </li>
-  </ul>
-</div>
+  </ul> -->
+</ul>

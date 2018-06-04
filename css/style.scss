@@ -13,7 +13,7 @@
   justify-content: space-between;
   height: $navbarHeight;
   padding: 0 16px;
-  border-bottom: 1px solid $borderColor;
+  box-shadow: 0 2px 8px -1px rgb(234, 234, 234);
   background-color: $navbarBgColor;
   z-index: 10;
 
@@ -51,6 +51,69 @@
   top: 0;
   left: 0;
   right: 0;
+}
+
+/**
+ * Sidebar nav
+ */
+
+.lh-menu {
+  li > a,
+  .lh-menu-submenu-title, {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 30px;
+    color: rgba(0, 0, 0, .80);
+  }
+
+  .lh-menu-item > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .lh-menu-item[disabled] > a {
+    .coming-badge {
+      font-size: 12px;
+      color: rgba($secondary, .45);
+      margin-left: -5px;
+      top: -10px;
+      position: relative;
+    }
+
+    pointer-events: none;
+    cursor: default;
+    color: rgba(0, 0, 0, .40);
+  }
+
+  .lh-menu-item-active > a {
+    font-weight: 400;
+    color: $secondary;
+    background-color: rgba($secondary, .05);
+  }
+
+  .lh-menu-submenu-title {
+    font-weight: 400;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.lh-menu-item-group-title {
+  font-size: 16px;
+  padding: 8px 0 8px 50px;
+  color: rgba(0, 0, 0, .45);
+}
+
+.lh-menu-item-group-list {
+  > .lh-menu-item > a {
+    display: block;
+    padding: 8px 0 8px 70px;
+  }
+}
+
+.lh-menu-submenu-sub > .lh-menu-item > a {
+  padding-left: 50px;
 }
 
 /**
@@ -127,7 +190,7 @@ footer {
 
   h2 {
     font-weight: 400;
-    margin-top: 2em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
   }
 
@@ -154,6 +217,7 @@ footer {
 
   ul {
     margin-left: 40px;
+    margin-bottom: 20px;
 
     > li {
       font-size: 17px;
@@ -165,11 +229,17 @@ footer {
     }
   }
 
-  code {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: $codeBgColor;
-    padding: 2px;
+  pre {
+    padding: 16px;
     border-radius: 2px;
+    background-color: $codeBgColor;
+  }
+
+  code {
+    font-family: 'Consolas', sans-serif;
+    padding: 2px 4px;
+    border-radius: 2px;
+    background-color: $codeBgColor;
   }
 
   code[class*="language-"],
@@ -211,6 +281,37 @@ footer {
       font-weight: 300;
       margin-bottom: 0;
       color: lighten($primary, 40%);
+    }
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    > thead > tr > th,
+    > tbody > tr > td {
+      > strong {
+        font-weight: 600;
+      }
+
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+    }
+
+    > thead > tr > th {
+      font-weight: 600;
+      background-color: rgba(27,31,35,0.05);
+    }
+
+    > tbody > tr:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+    
+    > tbody > tr > td {
+      text-align: left !important;
     }
   }
 }

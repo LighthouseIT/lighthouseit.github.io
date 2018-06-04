@@ -2,7 +2,7 @@ en:
   documentation: Documentation
   introduction: Introduction
   components: Components
-  theme: Theme
+  theme: Customize Theme
   templates: Templates
   utility: Utility
   typography: Typography
@@ -11,7 +11,7 @@ pt:
   documentation: Documentação
   introduction: Introdução
   components: Componentes
-  theme: Temas
+  theme: Personalizar o Tema
   templates: Templates
   utility: Utility
   typography: Typography
