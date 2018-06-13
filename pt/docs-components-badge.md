@@ -1,14 +1,15 @@
 ---
-lang: en
+lang: pt
 layout: docs
-permalink: /en/docs/components/badge
+permalink: /pt/docs/components/badge
 title: Badge
 section: Components
 ---
+{% assign baseUrl = site.baseurl | append: '/' | append: page.lang %}
 
 # Badge
 
-Pequeno indicador de status, normalmente utilizado, por exemplo, para indicar que existem notificações ou mensagens não lidas.
+Pequeno indicador de status, normalmente usado, por exemplo, para indicar notificações ou mensagens não lidas.
 
 ## API
 
@@ -23,25 +24,26 @@ Pequeno indicador de status, normalmente utilizado, por exemplo, para indicar qu
 
 | Declaration  | Description  |
 |--------------|--------------|
-| **dark** | Define o `backgroundColor` como `darkColor` conforme definido no tema. |
-| **success** | Define o `backgroundColor` como `successColor` conforme definido no tema. |
-| **danger** | Define o `backgroundColor` como `dangerColor` conforme definido no tema. |
-| **warning** | Define o `backgroundColor` como `warningColor` conforme definido no tema. |
-| **info** | Define o `backgroundColor` como `infoColor` conforme definido no tema. |
+| **dark** | Define `backgroundColor` como` darkColor` como definido no tema. |
+| **success** | Define `backgroundColor` como `successColor` como definido no tema. |
+| **danger** | Define `backgroundColor` como `dangerColor` como definido no tema. |
+| **warning** | Define `backgroundColor` como `warningColor` como definido no tema. |
+| **info** | Define `backgroundColor` como `infoColor` como definido no tema. |
 
 ## JSX Declaration
 
 ``` jsx
 {% raw %}
 <Badge styleName="sm-gutter start" count={200}>
-    <View
-        styleName="rounded-corners"
-        style={{ width: 40, height: 40, backgroundColor: '#ccc' }}
-    />
+  <View
+    styleName="rounded-corners"
+    style={{ width: 40, height: 40, backgroundColor: '#ccc' }}
+  />
 </Badge>
 {% endraw %}
 ```
 
-## Exemplo
+## Snack Example
 
-<div data-snack-id="HyNkAQfgX" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.08);border-radius:4px;height:505px;width:100%"></div>
+<div data-snack-id="@lighthouse/badge-example---lighthouse-ui" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.08);border-radius:4px;height:505px;width:100%"></div>
+<script async src="https://snack.expo.io/embed.js"></script>

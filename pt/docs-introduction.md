@@ -6,7 +6,7 @@ redirect_from: /pt/docs
 title: Introdução
 section: Documentação
 ---
-
+{% assign baseUrl = site.baseurl | append: '/' | append: page.lang %}
 {% assign translations = site.data.translations[page.lang] %}
 
 # Introdução

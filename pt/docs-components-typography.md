@@ -3,14 +3,32 @@ lang: pt
 layout: docs
 permalink: /pt/docs/components/typography
 title: Typography
-section: Componentes
+section: Components
 ---
 
 # Typography
 
-Componentes de tipografia com estilos predefinidos que proporcionarão uma melhor apresentação para os apps em um modo geral.
+Typography are a set of components extending the React Native `Text` with predefined styles.
 
-Os componentes disponíveis são:
+## API
+
+**Props**
+
+`Typography` components doesn't have custom Props, however, all Props available in the standard React Native `Text` component are supported by each component.
+
+**Style names**
+
+| Declaration  | Description  |
+|--------------|--------------|
+| **bold** | Define o texto como bold. |
+| **muted** | Define a `opacity` para `mutedOpacity` como definido no tema. |
+| **line-through** | Define uma linha através do texto. |
+| **multiline** | Aumenta o line-height para permitir quebra de linha |
+| **h-center** | Alinha o texto ao centro |
+| **h-left** | Alinha o texto a esquerda |
+| **h-right** | Alinha o texto a direita |
+
+## JSX Declaration
 
 ``` jsx
 <Heading>...</Heading>
@@ -21,22 +39,6 @@ Os componentes disponíveis são:
 <Label>...</Label>
 ```
 
-## API
+## Snack Example
 
-**Props**
-
-- Todas Props suportadas pelo componente `Text` padrão do React Native. [Veja a lista completa das Props suportadas.](https://facebook.github.io/react-native/docs/text.html#props)
-
-**Style names**
-
-| Declaration  | Description  |
-|--------------|--------------|
-| **bold** | Definite o texto como negrito |
-| **muted** | Definite o texto com uma opacidade de `0.5` |
-| **line-through** | Define uma linha através do texto |
-| **multiline** | Aumenta o espaçamento das linhas para permitir quebra no texto |
-| **h-center** | Alinha o texto ao centro |
-| **h-left** | Alinha o texto a esquerda |
-| **h-right** | Alinha o texto a direita |
-
-## Exemplo
+Em breve.
