@@ -20,11 +20,10 @@ Nosso time de desenvolvedores vem trabalhando constantemente para tornar a const
 Por conta desse objetivo decidimos criar um poderoso **Toolkit para React Native** que torne esses objetivos possíveis.
 
 Veja abaixo o que nosso toolkit tem a oferecer:
-- [Lighthouse Ignite Boilerplate](#conheça-o-lighthouse-ignite-boilerplate) - Um gerador que possibilida iniciar o desenvolvimento de apps React Native em tempo recorde!
-- [UI {{ translations.components }}]({{site.url}}/{{page.lang}}/docs/components) - Uma completa biblioteca de componentes 100% customizaveis.
+- [Lighthouse Boilerplate](#conheça-o-lighthouse-boilerplate) - Um gerador que possibilida iniciar o desenvolvimento de apps React Native em tempo recorde!
+- [{{ translations.theme }}]({{site.url}}/{{page.lang}}/docs/theme) - Customize rapidamente seus aplicativos de maneira rápida e descomplicada.
+- [UI {{ translations.components }}]({{site.url}}/{{page.lang}}/docs/components) - Uma completa biblioteca de componentes 100% customizaveis com suporte para Android e iOS.
 - [Templates]({{site.url}}/{{page.lang}}/docs/templates) - Diversos templates que incluem Lista de Produtos, Galeria de Images, Carrinho de Compras, etc.
-- [{{ translations.theme }}]({{site.url}}/{{page.lang}}/docs/theme) - Customize rapidamente seus aplicativos de maneira rápida e eficiente.
-- [{{ translations.utility }}]({{site.url}}/{{page.lang}}/docs/utilities) - Uma biblioteca com diversos utilitários para ajudar durante o desenvolvimento.
 
 ## Conheça o Lighthouse Ignite Boilerplate
 
